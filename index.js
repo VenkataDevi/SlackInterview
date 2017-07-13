@@ -41,7 +41,7 @@ app.post('/wishme', function(req, res) {
 app.post('/callmeslack', function(req, res) {
 	console.log("event from slack : "+JSON.stringify(req.body));
 	if(req.body && req.body.event && req.body.event.text == "order made") {
-		postMessageToWebHook(slackUrls.webhook.shipment,"An oder has been placed in other channel",function(body){
+		postMessageToWebHook(slackUrls.webhook.shipment,"An order has been placed in other channel",function(body){
 			console.log(body);
 		});  
 	}
