@@ -10,7 +10,7 @@ Prerequisites: <br>
 <h1>Incoming Webhook API integration with APP</h1>
 Summary :-
 Built a new App "Tech-assessment" with the feature of Incoming webhook in the channel "orders". It will post give message to the channel "orders". 
-<br>
+<br/>
 Usage :-
 Hit the below Heroku App get URL and pass the data to be sent in the query string param "data" like below.
 https://aqueous-headland-93426.herokuapp.com/callwebhook?data=Hello
@@ -19,7 +19,7 @@ This will pass text "Hello" to the channel "orders".
 <h1>Slash command API integration</h1>
 Summary :-
 Created a new slash command "/wishme" in the Tech-Assessment APP in the channel "orders" which is associated with the app server url "https://aqueous-headland-93426.herokuapp.com/wishme". 
-<br>
+<br/>
 Usage:-
 You can use the slash command "/wishme" in the channel "orders" and it will reply back saying "Hi Hello !!! How are you?" from server.
 
@@ -28,6 +28,6 @@ Summary:-
 - Subscribed to an event "message.channels" in the channel "orders" in the app "USPS" with the callback to the app server https://aqueous-headland-93426.herokuapp.com/callmeslack 
 - The app server reacts to the message "order made"
 - The app server sends message "An order has been placed in other channel" to the channel "shipment"
-<br>
+<br/>
 Usage:-
 Send message called "order made" in the channel "orders" and you will see a echo message "An order has been placed in other channel" in the other channel "shipment".
