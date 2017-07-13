@@ -9,8 +9,7 @@ Prerequisites: <br>
 
 <h1>Incoming Webhook API integration with APP</h1>
 Summary :-
-Built a new App "Tech-assessment" with the feature of Incoming webhook in the channel "orders". It will post give message to the channel "orders". 
-<br/>
+Built a new App "Tech-assessment" with the feature of Incoming webhook in the channel "orders". It will post give message to the channel "orders". <br>
 Usage :-
 Hit the below Heroku App get URL and pass the data to be sent in the query string param "data" like below.
 https://aqueous-headland-93426.herokuapp.com/callwebhook?data=Hello
