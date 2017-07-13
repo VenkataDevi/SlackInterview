@@ -18,8 +18,9 @@ var slackUrls = {
 
 // Defining root endpoint
 app.get('/', function(req, res) {
-  res.send('Welcome to Slack Integration!!'+ 
-	   '<br/> <a href="/callwebhook?data=Hello"> Call Web Hook API by passing data in query string params</a>');
+	var content = "<h1>Welcome to Slack Integration</h1>" +
+'<a href="https://github.com/VenkataDevi/SlackInterview/blob/master/README.md" target="_blank">Please visit the documentation here</a>';
+  res.send(content);
 });
 
 // Defining endpoint to call Slack incoming webhook
