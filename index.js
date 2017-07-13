@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 var slackUrls = {
 	
 	"webhook" : {
-		"dev" : "https://hooks.slack.com/services/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",
-		"shipping" : "https://hooks.slack.com/services/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"
+		"orders" : "https://hooks.slack.com/services/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",
+		"shipment" : "https://hooks.slack.com/services/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"
 	}
 };
 
@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 
 // Defining endpoint to call Slack incoming webhook
 app.get('/callwebhook', function(req, res) {
-	postMessageToWebHook(slackUrls.webhook.dev,req.query.data,function(body){
+	postMessageToWebHook(slackUrls.webhook.orders,req.query.data,function(body){
 		res.send("Response from Slack webhook API :"+ body); 
 	});  
 });
@@ -41,7 +41,7 @@ app.post('/wishme', function(req, res) {
 app.post('/callmeslack', function(req, res) {
 	console.log("event from slack : "+JSON.stringify(req.body));
 	if(req.body && req.body.event && req.body.event.text == "order made") {
-		postMessageToWebHook(slackUrls.webhook.shipping,"An oder has been placed in other channel",function(body){
+		postMessageToWebHook(slackUrls.webhook.shipment,"An oder has been placed in other channel",function(body){
 			console.log(body);
 		});  
 	}
